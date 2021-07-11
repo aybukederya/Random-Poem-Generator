@@ -1,0 +1,38 @@
+<head>
+    <style>
+
+    </style>
+</head>
+
+{% extends 'base.html' %}
+
+{% block head %}
+<br>
+<title> Random Poem Generator</title>
+{% endblock %}
+
+{% block body %}
+<body style="background-color:{{lighter_color_value}}">
+<h1 style="font-family: Courier New; text-align: center; color:{{title_value}}; font-weight:bold; -webkit-text-stroke: 0.2vw black; font-size:6vw;" 
+>Random Poem Generator!</h1>
+
+
+<div class = "poem" style="background-color:{{color_value}}"> 
+    {{first_line}}
+    <br>
+    {{second_line}}
+    <br>
+    {{third_line}}
+</div>  
+
+
+
+
+<form action="/" method="POST">
+    <input type="submit" class="btn btn-outline-dark"  name="challenge" value="Generate me another one!" style="display:block; float:right; width: 55%; margin-left: 10%; margin-right: 22.5%; font-family:Courier New; font-weight:bold; font-size:2.4vw">
+</form>
+
+<br>
+<footer> by Aybüke Derya Ekiz</footer>
+</body>
+{% endblock %}

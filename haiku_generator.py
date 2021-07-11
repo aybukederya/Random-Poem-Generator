@@ -1,6 +1,5 @@
 #random poem generator
 import random
-from tkinter import *
 
 #Create vowel and words that act like they are starting with vowel lists
 #so that the appropriate article can be assigned
@@ -23,8 +22,8 @@ CANNONICAL = ["very","nearly","somewhat","hardly","completely","rather", "someti
 
 #Open text files and create the relevant word lists for these
 noun_singulars = open("nouns_singular.txt")
-adjectives = open("ADJECTIVEs.txt")
-adverbs = open("ADVERBs.txt")
+adjectives = open("adjectives.txt")
+adverbs = open("adverbs.txt")
 
 NOUN_SINGULAR = []
 ADJECTIVE = []
@@ -54,7 +53,7 @@ def noun_phrase():
     
     if adj == 0 and cannonical == 0:
         if my_article == "a" or my_noun_singular in H_WORDS:
-            if my_noun_singular[0] in VOWELS:
+            if (my_noun_singular != "") and my_noun_singular[0] in VOWELS:
                 my_article = "an"
         return [my_article, my_noun_singular]
     
@@ -101,7 +100,7 @@ def haiku():
     output = [noun_phrase(), [random.choice(VERB_INTRANSITIVE_SINGULAR),random.choice(ADVERB)], preposition_phrase()]
 
 
-    my_haiku = "\n"
+    my_haiku = ""
 
     for outer_elements in output:
         for inner_elements in outer_elements:
@@ -110,7 +109,7 @@ def haiku():
             else:
                 for word in inner_elements:
                     my_haiku += word + " "
-        my_haiku += "\n"
+        my_haiku += "/n"
     
     return my_haiku
 
@@ -133,10 +132,14 @@ def show_haiku_pop_up():
     again_button = Button(root, text="Generate me another one!", command = lambda:[root.destroy(), show_haiku_pop_up()], width=25)
     again_button.pack()
     mainloop()
+
+
+    
+
     
 
 
-show_haiku_pop_up()
+#show_haiku_pop_up()
 
 
 

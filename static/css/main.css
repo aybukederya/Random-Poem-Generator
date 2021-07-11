@@ -1,0 +1,22 @@
+.poem{
+    text-align: center;
+    font-family: "Helvetica";
+    margin: auto;
+    width: 55%;
+    border: 0.4vw solid black;
+    padding: 10px;
+    font-size:2.4vw;
+    margin-bottom:1.5vw;
+}
+
+
+footer{
+    margin-top:3.5vw;
+    text-align: center;
+    font-family: "Helvetica";
+    font-size:2vw;
+}
+
+
+
+
