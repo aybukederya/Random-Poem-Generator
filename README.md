@@ -1,4 +1,5 @@
 # Random-Poem-Generator
-Generates a random haiku type poem and shows it in a pop-up screen using Tkinter. It uses pre-determined grammar rules and chooses the appropriate word types randomly. 
-The end goal of this proejct is to create a webpage with options for different poem types. 
-The code is rather messy now but I will be organizing it in a more structured way while implementing it as a webpage. 
+Generates a random haiku poem. Randomly selectes between several possible sentence structures, and fills in the sentence with the appropriate parts of speeches by randomly selecting them from several txt files.
+
+Inspired by the randomness theme, the web-app also generates a new random pastel color with each poem. The randomly generated pastel color constitutes the background of the poem and its complementary color constitutes the background of the whole page. 
+
